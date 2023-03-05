@@ -13,10 +13,7 @@ import {
 
 import { setFilter } from 'redux/filter/filter-slice';
 
-import {
-  // getAllContacts,
-  getFilteredContacts,
-} from 'redux/contacts/contacts-selecrors';
+import { getFilteredContacts } from 'redux/contacts/contacts-selecrors';
 import { getFilter } from 'redux/filter/filter-selectors';
 
 import styles from './phoneBooks.module.scss';
@@ -42,7 +39,7 @@ const PhoneBook = () => {
 
   const handleFilter = ({ target }) => dispatch(setFilter(target.value));
 
-  const isContacts = Boolean(filteredContacts.length);
+  const isContacts = Boolean(filteredContacts);
 
   return (
     <div>
